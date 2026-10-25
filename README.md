@@ -40,4 +40,4 @@ npm run typecheck
 npm run build
 ```
 
-There are no Python dependencies; see `package.json` and `client/package.json` for Node dependencies. Review [SECURITY.md](SECURITY.md) for privacy and prototype limitations.
+There are no Python dependencies; see `package.json` and `client/package.json` for Node dependencies. Review [SECURITY.md](SECURITY.md) for privacy and prototype limitations.# -CYBERSHIELD-AI
