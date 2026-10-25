@@ -1,0 +1,224 @@
+[
+  {
+    "id": "kb-account-review",
+    "title": "Account activity triage",
+    "category": "Identity",
+    "content": "For unusual logins, verify the account owner, source context, MFA events, device posture, and approved travel. Correlate with identity-provider audit logs. Do not disable accounts solely from a heuristic finding.",
+    "keywords": [
+      "login",
+      "authentication",
+      "account",
+      "mfa",
+      "identity"
+    ],
+    "source": "Built-in defensive guidance"
+  },
+  {
+    "id": "kb-network-review",
+    "title": "Network anomaly triage",
+    "category": "Network",
+    "content": "Validate network anomalies against approved scanners, change windows, asset ownership, and established traffic baselines. Preserve relevant logs and escalate through the organization's incident process.",
+    "keywords": [
+      "network",
+      "port",
+      "outbound",
+      "dns",
+      "traffic"
+    ],
+    "source": "Built-in defensive guidance"
+  },
+  {
+    "id": "kb-incident",
+    "title": "Incident investigation basics",
+    "category": "Response",
+    "content": "Record timestamps, evidence sources, scope, and uncertainty. Prefer read-only validation and approved procedures. Keep containment or destructive actions under explicit human authorization.",
+    "keywords": [
+      "incident",
+      "evidence",
+      "investigation",
+      "response",
+      "containment"
+    ],
+    "source": "Built-in defensive guidance"
+  },
+  {
+    "id": "cisa-cve-2021-44228",
+    "title": "CVE-2021-44228 · Apache Log4j2",
+    "category": "CISA KEV",
+    "content": "A JNDI lookup handling flaw can allow remote code execution in affected Log4j2 deployments. Recommended action: Inventory affected applications and libraries; apply fixed versions and follow CISA and vendor guidance.",
+    "keywords": [
+      "CVE-2021-44228",
+      "Apache",
+      "Log4j2",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-44228",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2021-26855",
+    "title": "CVE-2021-26855 · Microsoft Exchange Server",
+    "category": "CISA KEV",
+    "content": "A server-side request forgery vulnerability in Exchange Server was exploited as part of the ProxyLogon attack chain. Recommended action: Apply Microsoft security updates and review Exchange systems for signs of compromise.",
+    "keywords": [
+      "CVE-2021-26855",
+      "Microsoft",
+      "Exchange Server",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2021-26855",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2023-34362",
+    "title": "CVE-2023-34362 · Progress Software MOVEit Transfer",
+    "category": "CISA KEV",
+    "content": "An SQL injection vulnerability in MOVEit Transfer was exploited to access affected transfer databases. Recommended action: Apply vendor updates and follow CISA/FBI MOVEit campaign guidance for affected deployments.",
+    "keywords": [
+      "CVE-2023-34362",
+      "Progress Software",
+      "MOVEit Transfer",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/sites/default/files/2023-06/aa23-158a-stopransomware-cl0p-ransomware-gang-exploits-moveit-vulnerability_7.pdf",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2023-22515",
+    "title": "CVE-2023-22515 · Atlassian Confluence Data Center and Server",
+    "category": "CISA KEV",
+    "content": "A broken access control issue enabled unauthorized administrator-account creation in affected Confluence instances. Recommended action: Apply Atlassian updates and inspect instances for unauthorized accounts and compromise indicators.",
+    "keywords": [
+      "CVE-2023-22515",
+      "Atlassian",
+      "Confluence Data Center and Server",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/sites/default/files/2023-10/aa23-289a-threat-actors-exploit-atlassian-confluence-cve-2023-22515-for-initial-access.pdf",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2023-4966",
+    "title": "CVE-2023-4966 · Citrix NetScaler ADC and Gateway",
+    "category": "CISA KEV",
+    "content": "A buffer overflow in certain NetScaler configurations can disclose sensitive information. Recommended action: Update affected appliances and follow CISA guidance to review and terminate persistent sessions as directed by the vendor.",
+    "keywords": [
+      "CVE-2023-4966",
+      "Citrix",
+      "NetScaler ADC and Gateway",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/guidance-addressing-citrix-netscaler-adc-and-gateway-vulnerability-cve-2023-4966-citrix-bleed",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2024-3400",
+    "title": "CVE-2024-3400 · Palo Alto Networks PAN-OS GlobalProtect",
+    "category": "CISA KEV",
+    "content": "An arbitrary file creation issue can lead to command injection on affected PAN-OS configurations with GlobalProtect enabled. Recommended action: Check affected versions and configuration, then apply Palo Alto Networks guidance and mitigations.",
+    "keywords": [
+      "CVE-2024-3400",
+      "Palo Alto Networks",
+      "PAN-OS GlobalProtect",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2024-21887",
+    "title": "CVE-2024-21887 · Ivanti Connect Secure and Policy Secure",
+    "category": "CISA KEV",
+    "content": "A command injection vulnerability in web components of affected Ivanti appliances was exploited in combination with other issues. Recommended action: Apply Ivanti updates and follow CISA guidance to investigate affected appliances.",
+    "keywords": [
+      "CVE-2024-21887",
+      "Ivanti",
+      "Connect Secure and Policy Secure",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/sites/default/files/2024-02/AA24-060B-Threat-Actors-Exploit-Multiple-Vulnerabilities-in-Ivanti-Connect-Secure-and-Policy-Secure-Gateways_0.pdf",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2024-1709",
+    "title": "CVE-2024-1709 · ConnectWise ScreenConnect",
+    "category": "CISA KEV",
+    "content": "An authentication bypass in ScreenConnect can allow an actor with network access to the management interface to create an administrator account. Recommended action: Update ScreenConnect to the vendor-fixed release and review systems for unauthorized access.",
+    "keywords": [
+      "CVE-2024-1709",
+      "ConnectWise",
+      "ScreenConnect",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/news-events/alerts/2024/02/22/cisa-adds-one-known-exploited-connectwise-vulnerability-cve-2024-1709-catalog",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2024-23897",
+    "title": "CVE-2024-23897 · Jenkins Jenkins CLI",
+    "category": "CISA KEV",
+    "content": "A path traversal issue in the Jenkins command-line interface can expose local files and may lead to further compromise. Recommended action: Update Jenkins and review exposed controllers using current vendor guidance.",
+    "keywords": [
+      "CVE-2024-23897",
+      "Jenkins",
+      "Jenkins CLI",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-23897",
+    "snapshotDate": "2026-10-26"
+  },
+  {
+    "id": "cisa-cve-2024-0012",
+    "title": "CVE-2024-0012 · Palo Alto Networks PAN-OS management interface",
+    "category": "CISA KEV",
+    "content": "An authentication bypass vulnerability affects the web-based management interface in certain PAN-OS products. Recommended action: Restrict management-interface exposure and apply Palo Alto Networks security updates.",
+    "keywords": [
+      "CVE-2024-0012",
+      "Palo Alto Networks",
+      "PAN-OS management interface",
+      "cisa",
+      "kev",
+      "vulnerability",
+      "patch"
+    ],
+    "source": "CISA Known Exploited Vulnerabilities Catalog / advisory",
+    "sourceUrl": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog?search_api_fulltext=CVE-2024-0012",
+    "snapshotDate": "2026-10-26"
+  }
+]

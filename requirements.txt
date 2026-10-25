@@ -1,0 +1,1 @@
+# No Python dependencies are required. This project runs on Node.js; see package.json and client/package.json.

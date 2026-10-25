@@ -1,0 +1,98 @@
+[
+  {
+    "id": "auth-failures",
+    "title": "Repeated authentication failures",
+    "description": "Synthetic authentication records with repeated failures.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "authentication", "status": "failed", "username": "analyst-demo", "sourceIp": "192.0.2.41", "count": 12 }],
+    "explanation": "Repeated failures can indicate password guessing; confirm against the identity provider and expected user activity."
+  },
+  {
+    "id": "suspicious-login",
+    "title": "Suspicious login pattern",
+    "description": "Synthetic login from an unusual location and time.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "login", "status": "success", "sourceIp": "198.51.100.26", "message": "new country login at unusual hour" }],
+    "explanation": "An unusual successful login is a review signal, not proof of compromise."
+  },
+  {
+    "id": "port-scan",
+    "title": "Port-scan-like log pattern",
+    "description": "Synthetic host records show many destination ports.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "network", "message": "port scan pattern", "sourceIp": "192.0.2.51", "count": 24 }],
+    "explanation": "Repeated port probes warrant checking authorized scanner schedules and network telemetry."
+  },
+  {
+    "id": "outbound-traffic",
+    "title": "Unusual outbound traffic",
+    "description": "Synthetic record with anomalous outbound volume.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "network", "action": "outbound", "message": "unusual outbound traffic volume", "bytes": 900000000 }],
+    "explanation": "Review the destination, process, and baseline before treating this volume anomaly as malicious."
+  },
+  {
+    "id": "dns-activity",
+    "title": "Suspicious DNS activity",
+    "description": "Synthetic DNS record with a long, encoded-looking query label.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "dns", "message": "suspicious dns query with unusually long encoded domain label" }],
+    "explanation": "Long DNS labels may be benign; inspect resolver logs and domain context."
+  },
+  {
+    "id": "web-errors",
+    "title": "Web application error spike",
+    "description": "Synthetic web logs with elevated server errors.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "http", "status": 500, "message": "server error spike", "count": 35 }],
+    "explanation": "Correlate server errors with deployment and request logs; error spikes alone do not establish an attack."
+  },
+  {
+    "id": "privilege-change",
+    "title": "Unexpected privilege change",
+    "description": "Synthetic record for a privilege change outside the normal window.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "privilege", "action": "privilege escalation", "message": "unexpected administrator privilege change" }],
+    "explanation": "Verify the change against approved access requests and audit records."
+  },
+  {
+    "id": "file-access",
+    "title": "Unexpected file access",
+    "description": "Synthetic record for unusual access to a sensitive file.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "file", "action": "access", "message": "unexpected access to sensitive file outside normal pattern" }],
+    "explanation": "Confirm the actor, resource, and business context with file audit logs."
+  },
+  {
+    "id": "rate-limit",
+    "title": "Repeated rate-limit events",
+    "description": "Synthetic API gateway logs with repeated throttling.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "api", "message": "rate limit exceeded repeatedly", "count": 19 }],
+    "explanation": "Check for client retries, load tests, and expected service behavior before escalation."
+  },
+  {
+    "id": "admin-actions",
+    "title": "Unusual administrative actions",
+    "description": "Synthetic audit record for an unexpected admin action.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "admin", "action": "configuration changed", "message": "unusual administrative action outside approved window" }],
+    "explanation": "Validate the actor, change ticket, and administrative audit trail."
+  },
+  {
+    "id": "exfil-indicator",
+    "title": "Potential data-exfiltration indicator",
+    "description": "Synthetic outbound transfer record; no real traffic is generated.",
+    "expectedClassification": "Suspicious",
+    "records": [{ "eventType": "network", "action": "outbound", "message": "potential data exfiltration indicator synthetic transfer", "bytes": 1500000000 }],
+    "explanation": "Review destination and data handling records; this synthetic heuristic is not confirmation of exfiltration."
+  },
+  {
+    "id": "benign-activity",
+    "title": "Benign scheduled activity",
+    "description": "Synthetic expected maintenance activity.",
+    "expectedClassification": "Benign",
+    "records": [{ "eventType": "maintenance", "action": "scheduled backup", "message": "approved routine backup completed", "status": "success" }],
+    "explanation": "No included rule matched this routine maintenance record."
+  }
+]

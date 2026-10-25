@@ -1,0 +1,21 @@
+**/node_modules/
+dist
+.DS_Store
+.env
+.env.*
+!.env.example
+server/public
+vite.config.ts.*
+*.tar.gz
+*.log
+
+# Local-only uploads, generated browser assets, and runtime SOC records
+attached_assets/
+client/dist/
+data/alerts.json
+data/analyses.json
+data/audit-log.json
+data/incidents.json
+data/investigations.json
+data/live-events.json
+data/url-threats.json

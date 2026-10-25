@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsB1Ix4eMWiNBNpeVMYaG3dGf3qde1DVoMCrgoJ9YvDlLmO3gWZpQFozAFgNmgaNjnqAFkCybWg6MwLXgtQbPDXaR4x0GMJja0Mba0E6EjK8C3q1BKzI+Rz4Gb/TODPwiM8lztPZ0umvb49x7mVpTehKGp1gLg2Z1mg/XXRHihtjP7q7gdLLoPnU0xffjF/BNmnxMjdct/wjjxPBgcV3QJLWVrwlHs4Zxn5Vu4T3lJv+ewZDgqL3DYlItkEuPlBIdeur1KdcmHQgMEd3IDMoOPD6lZSARbIbjVdVTR6O1ZOwJyiH4P09Crpm70/QOtFUZ7vXxH8zLjYAVT0oqUAX/4QIDAQAB",
+  "name": "CyberShield Link Protection",
+  "version": "1.0.0",
+  "description": "Checks clicked links against the local CyberShield service and blocks locally synced phishing-feed domains.",
+  "permissions": ["storage", "alarms", "declarativeNetRequest", "webNavigation"],
+  "host_permissions": ["http://127.0.0.1:3001/*", "http://localhost:3001/*"],
+  "background": { "service_worker": "service-worker.js" },
+  "action": { "default_title": "CyberShield Link Protection", "default_popup": "popup.html" },
+  "content_scripts": [{ "matches": ["http://*/*", "https://*/*"], "js": ["content.js"], "run_at": "document_start", "all_frames": false }]
+}
